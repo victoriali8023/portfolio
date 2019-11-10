@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Boutique Hotel</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style_second.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+  <a href="#content" class="skip">Skip to content</a>
+  <header id = "main">
+    <h1>Hi, I am Yuxuan Li</h1>
+    <p>I am a UX designer and developer.</p>
+    <div class="nav">
+      <nav>
+        <ul>
+          <li><a href="#index.html">UX Projects</a></li>
+          <li><a href="graphic.html">Graphic</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+  </div>
+  </header>
+<div class="introduction-textbox">
+  <h1>Boutique Hotel</h1>
+  <p>Integrating with heating, ventilation and air conditioning（HVAC） system，local history and special structure, to find unique features to attract tourists</p>
+</div>
+<div id = "content">
+<div class="history">
+  <h2>History Introduction</h2>
+  <p>This site has a close relationship with trains. After railroad establishment in 1900s, this area was populated and attracted plenty of people to live here due to the convenience and opportunities brought by the train.</p>
+  <img src="images/history.png" style="width: 100%">
+</div>
+
+<div class = "location">
+	<h2>Transportation and View</h2>
+	<p>The west side of the site is a main road, so the entrance should be arranged on west side, or on south side to avoid traffic jam.
+The view on south side is the best, and the second best is west side. Therefore, main elevation should be put on these two sides.</p>
+	<img src="images/location.png" style = "width:100%">	
+</div>
+
+<div class="concept">
+  <h2>Concept Formation</h2>
+  <p>The idea based on the shape of the train and the direction of the railroad. Guestroom floors are designed similar like train carriage. These bars either parallel or perpendicular to the direction of the railroad. </p>
+</div>
+
+<div class="formation-image" style="width:100%">
+  <img class="mySlides" src="images/base.png" style="width:100%">
+  <img class="mySlides" src="images/box.png" style="width:100%">
+  <img class="mySlides" src="images/rotate.png" style="width:100%">
+  <img class="mySlides" src="images/add.png" style="width:100%">
+  <img class="mySlides" src="images/envelope.png" style="width:100%">
+  <img class="mySlides" src="images/extend.png" style="width:100%">
+  
+  <div class="left spot circle" onclick="plusDivs(-1)">&#10094;</div>
+  <div class="right spot circle" onclick="plusDivs(1)">&#10095;</div>
+  
+</div>
+<div class = "analysis">
+	<h2>Design Details</h2>
+	<p>Floor plans, structure, sections and elevations show the way I express the feature of the hotel integrating with HVAC system and sustainability</p>
+	<img src="images/analysis.png" style = "width:100%">	
+</div>
+
+<div class = "model">
+	<h2>Physical Model</h2>
+	<p>People standing on different floors could still have view contacts with others and appreciate the interior landscapes.</p>
+	<img src="images/model.jpg" style = "width:100%">	
+</div>
+</div>
+ <footer>
+    <p>University of Michigan School of Information <br/>
+        &copy; Yuxuan Li, Portfolio</p>
+ </footer>
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+</body>
+</html>
