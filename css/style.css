@@ -1,0 +1,341 @@
+
+body{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  background-color: #ddd;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  background-attachment: fixed; /* Parallax effect */
+  background-image: url("../images/header.jpg");      /* Your code here - Link to header.jpg in the images folder */
+  background-position: center;  /* Parallax effect */
+  background-repeat: repeat; /* Parallax effect */
+  background-size: cover;
+  color: white;
+
+}
+h1{
+  font-weight: 600;
+  font-size: 3.125em;
+  line-height: 1;
+  padding: 50px 0;
+  text-align: center;
+  animation-name: bounce;
+  animation-duration: 5s;
+}
+h1.deepshadow {
+    color: #e0dfdc;
+    letter-spacing: .1em;
+    text-shadow: 
+      0 -1px 0 #fff, 
+      0 1px 0 #2e2e2e, 
+      0 2px 0 #2c2c2c, 
+      0 3px 0 #2a2a2a, 
+      0 4px 0 #282828, 
+      0 5px 0 #262626, 
+      0 6px 0 #242424, 
+      0 7px 0 #222, 
+      0 8px 0 #202020, 
+      0 9px 0 #1e1e1e, 
+      0 10px 0 #1c1c1c, 
+      0 11px 0 #1a1a1a, 
+      0 12px 0 #181818, 
+      0 13px 0 #161616, 
+      0 14px 0 #141414, 
+      0 15px 0 #121212, 
+      0 22px 30px rgba(0, 0, 0, 0.9);
+}
+
+h2{
+  font-size: 1.2em;
+  line-height: 1;
+}
+nav li{
+  display: inline-block;
+  padding-right: 20px;
+}
+nav a{
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+nav a:hover{
+  text-decoration: underline;
+  color: black;
+}
+:focus{
+  border: 2px solid black;
+  outline: none;
+}
+.skip {
+        position: absolute;
+        top: -1000px;
+        left: -1000px;
+        height: 1px;
+        width: 1px;
+        text-align: left;
+        overflow: hidden;
+ }
+a.skip:active, a.skip:focus, a.skip:hover {
+        left: 0; 
+        top: 0;
+        width: auto; 
+        height: auto; 
+        overflow: visible; 
+ }
+.container{
+  display: grid;
+  grid-row-gap: 20px;
+  grid-template-columns: auto 500px auto;
+  grid-template-rows: 400px auto 400px auto 400px auto 400px auto auto;
+  width: 100vw;
+}
+.container h2{
+  font-weight: 400;
+  text-align: center;
+}
+.container p{
+  font-size: 14px;
+  color: white;
+  text-align: center;
+}
+.nav{
+  font-family: "Montserrat", sans-serif;
+  font-size: normal;
+  font-weight: 200;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header{
+  height: 400px;
+}
+
+header p{
+  font-size: 1.5em;
+  padding: 0 100px;
+  text-align: center;
+}
+.health-manager-image{
+  grid-column: 2;
+  grid-row: 1;
+  max-height: 700px;
+  overflow: hidden;
+  opacity:0.8;
+}
+.health-manager-image:hover{
+  opacity: 1;
+}
+.health{
+  grid-column: 2;
+  grid-row: 2;
+  align-self: start;
+}
+.que-image{
+  grid-column: 2;
+  grid-row: 3;
+  max-height: 700px;
+  overflow: hidden;
+  opacity:0.6;
+}
+.que-image:hover{
+  opacity: 1;
+}
+.que{
+  grid-column: 2;
+  grid-row: 4;
+}
+.boutique-hotel-image{
+  grid-column: 2;
+  grid-row: 5;
+  max-height: 700px;
+  overflow: hidden;
+  opacity:0.9;
+}
+.boutique-hotel-image:hover{
+  opacity: 1;
+}
+.boutique{
+  grid-column: 2;
+  grid-row: 6;
+}
+.graphic-collection-image{
+  grid-column: 2;
+  grid-row: 7;
+  max-height: 700px;
+  overflow: hidden;
+  opacity:0.8;
+}
+.graphic-collection-image:hover{
+  opacity: 1;
+}
+.graphic{
+  grid-column: 2;
+  grid-row: 8;
+}
+footer{
+  grid-column: 1 / -1;
+  grid-row: 9;
+  padding-top: 30px;
+  text-align: center;
+}
+@keyframes bounce{
+  0%{
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  5%{
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  15%{
+    transform: translateY(0%);
+    padding-bottom: 5px;
+  }
+  30%{
+    transform: translateY(-50%);
+  }
+  40%{
+    transform: translateY(0%);
+    padding-bottom: 6px;
+  }
+  50%{
+    transform: translateY(-30%);
+  }
+  70% {
+    transform:translateY(0%);
+    padding-bottom: 7px;
+  }
+  80% {
+  transform:translateY(-15%);
+  }
+  90% {
+  transform:translateY(0%);
+  padding-bottom: 8px;
+  }
+  95% {
+  transform:translateY(-7%);
+  }
+  97% {
+  transform:translateY(0%);
+  padding-bottom: 9px;
+  }
+  99% {
+  transform:translateY(-3%);
+  }
+  100% {
+  transform:translateY(0);
+  padding-bottom: 9px;
+  opacity: 1;
+  }
+
+}
+@media only screen and (min-width: 768px) {
+
+  .container{
+    grid-template-rows: 400px 100px 400px 100px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 15px;
+    grid-row-gap: 10px;
+  }
+  .nav{
+    text-align: right;
+    padding: 35px 0;
+  }
+  .health-manager-image{
+    grid-column: 1;
+    }
+  .health{
+    grid-column: 1;
+  }
+  .que-image{
+    grid-row: 1;
+  }
+  .que{
+    grid-row: 2;
+  }
+  .boutique-hotel-image{
+    grid-column: 3;
+    grid-row: 1;
+  }
+  .boutique{
+    grid-column: 3;
+    grid-row: 2;
+  }
+  .graphic-collection-image{
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .graphic{
+    grid-column: 1;
+    grid-row: 4;
+  }
+}
+@media only screen and (min-width: 2000px) {
+  .container{
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 2fr 1fr;
+  }
+  .graphic-collection-image{
+    grid-column: 4;
+    grid-row: 1;
+  }
+  .graphic{
+    grid-column: 4;
+    grid-row: 2;
+  }
+  }
+}
+@media(prefers-reduced-motion: reduce) {
+  @keyframes bounce{
+  0%{
+    transform: unset;
+    opacity: unset;
+  }
+  5%{
+    transform: unset;
+    opacity: unset;
+  }
+  15%{
+    transform: unset;
+    padding-bottom: unset;
+  }
+  30%{
+    transform: unset;
+  }
+  40%{
+    transform: unset;
+    padding-bottom: unset;
+  }
+  50%{
+    transform: unset;
+  }
+  70% {
+    transform:unset;
+    padding-bottom: unset;
+  }
+  80% {
+  transform:unset;
+  }
+  90% {
+  transform:unset;
+  padding-bottom: unset;
+  }
+  95% {
+  transform:unset;
+  }
+  97% {
+  transform:unset;
+  padding-bottom: unset;
+  }
+  99% {
+  transform:unset;
+  }
+  100% {
+  transform:unset;
+  padding-bottom: unset;
+  opacity: unset;
+  }
+
+}
+/*End the media query*/
