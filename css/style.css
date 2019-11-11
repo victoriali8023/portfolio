@@ -305,8 +305,7 @@ footer{
     -webkit-transition: initial;
     transition: initial;
  }
-  @keyframes bounce{
-    h1{
+  h1{
         animation:none;
     }
   
