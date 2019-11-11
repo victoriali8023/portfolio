@@ -257,8 +257,13 @@ footer{
     scroll-behavior: auto; 
   }
   a.skip:active, a.skip:focus, a.skip:hover {
-         -webkit-transition: initial;
- 	    transition: initial;
+  	left: 0; 
+    top: 0;
+    width: auto; 
+    height: auto; 
+    overflow: visible; 
+    -webkit-transition: initial;
+ 	transition: initial;
  }
 }
 
