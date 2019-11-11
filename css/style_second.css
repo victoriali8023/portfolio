@@ -43,6 +43,9 @@ h2{
 .interactive-textbox p{
 	margin-bottom: 20px;
 }
+nav{
+	padding-left: 150px;
+}
 nav li{
   display: inline-block;
   padding-right: 20px;
@@ -53,6 +56,9 @@ nav a{
   text-decoration: none;
 }
 nav a:hover{
+  text-decoration: underline;
+}
+.current a{
   text-decoration: underline;
 }
 :focus{

@@ -94,6 +94,9 @@ a.skip:focus{
   padding: 20px 0;
   text-align: center;
 }
+.current a{
+  text-decoration: underline;
+}
 
 .container{
   display: grid;
@@ -113,6 +116,7 @@ a.skip:focus{
 }
 header{
   height: 400px;
+  background-color: rgba(255, 255, 255, 0);
 }
 header p{
   font-size: 1.5em;
