@@ -67,26 +67,28 @@ nav a:hover{
   border: 2px solid grey;
   outline: none;
 }
-.skip {
-  position: absolute;
-  top: -1000px;
-  left: -1000px;
-  height: 1px;
-  width: 1px;
-  text-align: left;
-  overflow: hidden;
 
+/*skip to content*/
+.skip {
+        position: absolute;
+        top: -40px;
+        left: -1000px;
+        height: 1px;
+        width: 1px;
+        text-align: left;
+        overflow: hidden;
  }
-a.skip:focus{
-  left: 0; 
-  top: 0;
-  width: auto; 
-  height: auto; 
-  overflow: visible; 
-  -webkit-transition: top 1s ease-out;
-  transition: top 1s ease-out;
-  /*z-index: 1;*/
+ a.skip:focus{
+        left: 0; 
+        top: 0;
+        width: auto; 
+        height: auto; 
+       
+        overflow: visible; 
+        -webkit-transition: top 1s ease-out;
+      transition: top 1s ease-out;
  }
+/* end of skip to content*/
 .nav{
   font-family: "Montserrat", sans-serif;
   font-size: normal;
@@ -114,9 +116,11 @@ a.skip:focus{
   color: white;
   text-align: center;
 }
+
 header{
   height: 400px;
 }
+
 header p{
   font-size: 1.5em;
   padding: 0 100px;
@@ -292,7 +296,7 @@ footer{
   }
   }
 }
-@media screen and (prefers-reduced-motion: reduce){
+@media screen and (prefers-reduced-motion:reduce){
   html{
     scroll-behavior: auto; 
   }
@@ -303,60 +307,11 @@ footer{
     height: auto; 
     overflow: visible; 
     -webkit-transition: initial;
-    transition: initial;
+  transition: initial;
  }
   h1{
-        animation:none;
-    }
+    animation:none;
+  }
   
-/*  0%{
-    transform: unset;
-    opacity: unset;
-  }
-  5%{
-    transform: unset;
-    opacity: unset;
-  }
-  15%{
-    transform: unset;
-    padding-bottom: unset;
-  }
-  30%{
-    transform: unset;
-  }
-  40%{
-    transform: unset;
-    padding-bottom: unset;
-  }
-  50%{
-    transform: unset;
-  }
-  70% {
-    transform:unset;
-    padding-bottom: unset;
-  }
-  80% {
-  transform:unset;
-  }
-  90% {
-  transform:unset;
-  padding-bottom: unset;
-  }
-  95% {
-  transform:unset;
-  }
-  97% {
-  transform:unset;
-  padding-bottom: unset;
-  }
-  99% {
-  transform:unset;
-  }
-  100% {
-  transform:unset;
-  padding-bottom: unset;
-  opacity: unset;
-  }*/
-
 }
 /*End the media query*/
