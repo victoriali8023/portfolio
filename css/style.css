@@ -306,7 +306,7 @@ footer{
     transition: initial;
  }
   @keyframes bounce{
-    .deepshadow{
+    h1{
         animation:none;
     }
   
