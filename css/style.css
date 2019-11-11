@@ -7,7 +7,7 @@ body{
   margin: 0;
   padding: 0;
   background-attachment: fixed; /* Parallax effect */
-  background-image: url("../images/header.jpg");      /* Your code here - Link to header.jpg in the images folder */
+  background-image: url("../images/header02.jpg");      /* Your code here - Link to header.jpg in the images folder */
   background-position: center;  /* Parallax effect */
   background-repeat: repeat; /* Parallax effect */
   background-size: cover;
@@ -24,7 +24,7 @@ h1{
   animation-duration: 5s;
 }
 h1.deepshadow {
-    color: #e0dfdc;
+    color: white;
     letter-spacing: .1em;
     text-shadow: 
       0 -1px 0 #fff, 
@@ -42,7 +42,7 @@ h1.deepshadow {
       0 12px 0 #181818, 
       0 13px 0 #161616, 
       0 14px 0 #141414, 
-      0 15px 0 #121212, 
+      0 15px 0 white, 
       0 22px 30px rgba(0, 0, 0, 0.9);
 }
 
@@ -61,10 +61,9 @@ nav a{
 }
 nav a:hover{
   text-decoration: underline;
-  color: black;
 }
 :focus{
-  border: 2px solid black;
+  border: 2px solid grey;
   outline: none;
 }
 .skip {
@@ -75,6 +74,7 @@ nav a:hover{
         width: 1px;
         text-align: left;
         overflow: hidden;
+
  }
 a.skip:active, a.skip:focus, a.skip:hover {
         left: 0; 
@@ -82,20 +82,9 @@ a.skip:active, a.skip:focus, a.skip:hover {
         width: auto; 
         height: auto; 
         overflow: visible; 
+        -webkit-transition: top 1s ease-out;
+        transition: top 1s ease-out;
  }
- .skip a{
-  background: white;
-  left: 0;
-  padding: 6px;
-  position: absolute;
-  top: -40px;
-  -webkit-transition: top 1s ease-out;
-  transition: top 1s ease-out;
-  z-index: 1;
-}
-.skip a:focus{
-  top: 0;
-}
 .nav{
   font-family: "Montserrat", sans-serif;
   font-size: normal;
@@ -103,20 +92,7 @@ a.skip:active, a.skip:focus, a.skip:hover {
   padding: 20px 0;
   text-align: center;
 }
-.skip a{
-  background: white;
-  left: 0;
-  padding: 6px;
-  position: absolute;
-  top: -40px;
-  -webkit-transition: top 1s ease-out;
-  transition: top 1s ease-out;
-  z-index: 1;
-}
 
-.skip a:focus{
-  top: 0;
-}
 .container{
   display: grid;
   grid-row-gap: 20px;
@@ -133,11 +109,9 @@ a.skip:active, a.skip:focus, a.skip:hover {
   color: white;
   text-align: center;
 }
-
 header{
   height: 400px;
 }
-
 header p{
   font-size: 1.5em;
   padding: 0 100px;
@@ -148,10 +122,10 @@ header p{
   grid-row: 1;
   max-height: 700px;
   overflow: hidden;
-  opacity:0.8;
+  filter: opacity(80%);
 }
 .health-manager-image:hover{
-  opacity: 1;
+  filter: opacity(100%);
 }
 .health{
   grid-column: 2;
@@ -163,10 +137,10 @@ header p{
   grid-row: 3;
   max-height: 700px;
   overflow: hidden;
-  opacity:0.6;
+  filter: opacity(60%);
 }
 .que-image:hover{
-  opacity: 1;
+  filter: opacity(100%);
 }
 .que{
   grid-column: 2;
@@ -177,10 +151,10 @@ header p{
   grid-row: 5;
   max-height: 700px;
   overflow: hidden;
-  opacity:0.9;
+  filter: opacity(90%);
 }
 .boutique-hotel-image:hover{
-  opacity: 1;
+  filter: opacity(100%);
 }
 .boutique{
   grid-column: 2;
@@ -191,10 +165,10 @@ header p{
   grid-row: 7;
   max-height: 700px;
   overflow: hidden;
-  opacity:0.8;
+  filter: opacity(80%);
 }
 .graphic-collection-image:hover{
-  opacity: 1;
+  filter: opacity(100%);
 }
 .graphic{
   grid-column: 2;
@@ -313,25 +287,14 @@ footer{
   }
   }
 }
-@media(prefers-reduced-motion: reduce){
+@media screen and (prefers-reduced-motion: reduce){
   html{
-      scroll-behavior: auto; 
+    scroll-behavior: auto; 
   }
-
-  .skip a{
-    background: white;
-    left: 0;
-    padding: 6px;
-    position: absolute;
-    top: -40px;
-    -webkit-transition: initial;
-    transition: initial;
-    z-index: 1;
-  }
-
-  .skip a:focus{
-    top:0;
-  }
+  a.skip:active, a.skip:focus, a.skip:hover {
+      -webkit-transition: initial;
+      transition: initial;
+ }
   @keyframes bounce{
   0%{
     transform: unset;

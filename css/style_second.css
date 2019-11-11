@@ -19,6 +19,8 @@ a.skip:active, a.skip:focus, a.skip:hover {
         width: auto; 
         height: auto; 
         overflow: visible; 
+        -webkit-transition: top 1s ease-out;
+ 	    transition: top 1s ease-out;
  }
 /* end of skip to content*/
 h1{
@@ -51,16 +53,15 @@ nav a{
 }
 nav a:hover{
   text-decoration: underline;
-  color: black;
 }
 :focus{
-  border: 2px solid black;
+  border: 2px solid grey;
   outline: none;
 }
 header{
   height: 250px;
   background-attachment: fixed; /* Parallax effect */
-  background-image: url("../images/header.jpg");      /* Your code here - Link to header.jpg in the images folder */
+  background-image: url("../images/header02.jpg");      /* Your code here - Link to header.jpg in the images folder */
   background-position: center;  /* Parallax effect */
   background-repeat: repeat; /* Parallax effect */
   background-size: cover;
@@ -83,8 +84,8 @@ img{
 }
 .container{
 	display: grid;
-	grid-template-rows: repeat(3, 2fr 1fr);
-	grid-column: auto 1fr auto;
+	grid-template-rows: repeat(3, 2fr 1fr) auto;
+	grid-column: auto 2fr auto;
 	padding-left: 5%;
     padding-right: 5%;
 }
@@ -114,6 +115,12 @@ img{
 	grid-row: 6;
 	grid-column: 2;
 	margin-right: 100px;
+}
+
+footer{
+	grid-row: 7;
+	grid-column: 1/-1;
+	text-align: center;
 }
 
 /*for slider in boutique*/
@@ -149,6 +156,9 @@ img{
     color: grey;
     padding-left:2%;
 }
+main{
+	padding-left: 5%;
+}
 form div{
  	display:inline-block;
     width: 60%;
@@ -157,16 +167,11 @@ button.btn{
     display: block;
     margin: 0 auto;
 }
-.text-center h1, #about h1, #about p{
+.text-center h1, .about h1, .about p{
     text-align: left;
     padding-left: 2%;
 }
-footer{
-	grid-row: 7;
-	grid-column: 1/-1;
-	text-align: center;
-}
-
+/*end of form style*/
 
 @media only screen and (min-width: 768px) {
 img{
@@ -180,8 +185,8 @@ img{
 	text-align: left;
 }
 .container{
-	grid-template-columns:repeat(3, 1fr);
-	grid-template-rows: 2fr 1fr auto;
+	grid-template-columns:repeat(2, 1fr);
+	grid-template-rows: 2fr 1fr 2fr 1fr auto;
 }
 .textbox{
 	overflow: auto;
@@ -207,23 +212,20 @@ img{
 	grid-column: 2;
 }
 .t{
-	grid-row: 1;
-	grid-column: 3;
+	grid-row: 3;
+	grid-column: 1;
 }
 .third{
-	grid-row: 2;
-	grid-column: 3;
+	grid-row: 4;
+	grid-column: 1;
 }
 footer{
-	grid-row: 3;
+	grid-row: 5;
 }
 	
 
 }
-@media only screen and (min-width: 2000px) {
-img{
-	width: 70%;
-}
+@media only screen and (min-width: 1200px) {
 
 .container{
 	grid-template-columns:repeat(3, 1fr);
@@ -236,22 +238,6 @@ img{
 	height: 110px;
 	display: inline-block;
 }
-.f{
-	grid-row: 1;
-	grid-column: 1;
-}
-.first{
-	grid-row: 2;
-	grid-column: 1;
-}
-.s{
-	grid-row: 1;
-	grid-column: 2;
-}
-.second{
-	grid-row: 2;
-	grid-column: 2;
-}
 .t{
 	grid-row: 1;
 	grid-column: 3;
@@ -266,24 +252,13 @@ footer{
 	
 
 }
-@media(prefers-reduced-motion: reduce){
+@media screen and (prefers-reduced-motion: reduce){
   html{
-      scroll-behavior: auto; 
+    scroll-behavior: auto; 
   }
-
-  .skip a{
-    background: white;
-    left: 0;
-    padding: 6px;
-    position: absolute;
-    top: -40px;
-    -webkit-transition: initial;
-    transition: initial;
-    z-index: 1;
-  }
-
-  .skip a:focus{
-    top:0;
-  }
-  }
+  a.skip:active, a.skip:focus, a.skip:hover {
+         -webkit-transition: initial;
+ 	    transition: initial;
+ }
+}
 
