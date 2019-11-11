@@ -167,6 +167,7 @@ form div{
 button.btn{            
     display: block;
     margin: 0 auto;
+    font-weight: bold;
 }
 .text-center h1, .about h1, .about p{
     text-align: left;
