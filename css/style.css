@@ -68,23 +68,24 @@ nav a:hover{
   outline: none;
 }
 .skip {
-        position: absolute;
-        top: -1000px;
-        left: -1000px;
-        height: 1px;
-        width: 1px;
-        text-align: left;
-        overflow: hidden;
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+  height: 1px;
+  width: 1px;
+  text-align: left;
+  overflow: hidden;
 
  }
-a.skip:active, a.skip:focus, a.skip:hover {
-        left: 0; 
-        top: 0;
-        width: auto; 
-        height: auto; 
-        overflow: visible; 
-        -webkit-transition: top 1s ease-out;
-        transition: top 1s ease-out;
+a.skip:focus{
+  left: 0; 
+  top: 0;
+  width: auto; 
+  height: auto; 
+  overflow: visible; 
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  /*z-index: 1;*/
  }
 .nav{
   font-family: "Montserrat", sans-serif;
@@ -292,7 +293,7 @@ footer{
   html{
     scroll-behavior: auto; 
   }
-  a.skip:active, a.skip:focus, a.skip:hover {
+  a.skip:focus{
     left: 0; 
     top: 0;
     width: auto; 
@@ -351,6 +352,5 @@ footer{
   opacity: unset;
   }
 
-}
 }
 /*End the media query*/
