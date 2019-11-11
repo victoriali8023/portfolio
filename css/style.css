@@ -309,9 +309,8 @@ footer{
     -webkit-transition: initial;
   transition: initial;
  }
-  h1{
-    animation:none;
-  }
-  
+ h1{
+  animation: none;
+ }
 }
 /*End the media query*/
