@@ -14,6 +14,26 @@ body{
   color: white;
 
 }
+/*skip to content*/
+.skip {
+        position: absolute;
+        top: -40px;
+        left: -1000px;
+        height: 1px;
+        width: 1px;
+        text-align: left;
+        overflow: hidden;
+ }
+ a.skip:focus{
+      left: 0; 
+      top: 0;
+      width: auto; 
+      height: auto; 
+      overflow: visible; 
+      -webkit-transition: top 1s ease-out;
+      transition: top 1s ease-out;
+ }
+/* end of skip to content*/
 h1{
   font-weight: bold;
   font-size: 3.125em;
@@ -68,27 +88,6 @@ nav a:hover{
   outline: none;
 }
 
-/*skip to content*/
-.skip {
-        position: absolute;
-        top: -40px;
-        left: -1000px;
-        height: 1px;
-        width: 1px;
-        text-align: left;
-        overflow: hidden;
- }
- a.skip:focus{
-        left: 0; 
-        top: 0;
-        width: auto; 
-        height: auto; 
-       
-        overflow: visible; 
-        -webkit-transition: top 1s ease-out;
-      transition: top 1s ease-out;
- }
-/* end of skip to content*/
 .nav{
   font-family: "Montserrat", sans-serif;
   font-size: normal;
@@ -116,7 +115,6 @@ nav a:hover{
   color: white;
   text-align: center;
 }
-
 header{
   height: 400px;
 }
@@ -307,9 +305,9 @@ footer{
     height: auto; 
     overflow: visible; 
     -webkit-transition: initial;
-  transition: initial;
+    transition: initial;
  }
- h1{
+ .deepshadow h1{
   animation: none;
  }
 }
