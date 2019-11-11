@@ -116,7 +116,6 @@ a.skip:focus{
 }
 header{
   height: 400px;
-  background-color: black;
 }
 header p{
   font-size: 1.5em;
@@ -307,7 +306,11 @@ footer{
     transition: initial;
  }
   @keyframes bounce{
-  0%{
+    .deepshadow{
+        animation:none;
+    }
+  
+/*  0%{
     transform: unset;
     opacity: unset;
   }
@@ -354,7 +357,7 @@ footer{
   transform:unset;
   padding-bottom: unset;
   opacity: unset;
-  }
+  }*/
 
 }
 /*End the media query*/
